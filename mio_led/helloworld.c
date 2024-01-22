@@ -1,5 +1,5 @@
 /*
-"helloworld.c" template is used as a startign point to toggle led on the ZYBO Z7-20 board. 
+"helloworld.c" template is used as a starting point to toggle led present on the ZYBO Z7-20 board. 
 */
 #include <stdio.h>
 #include "platform.h"
