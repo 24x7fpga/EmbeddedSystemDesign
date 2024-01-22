@@ -1,0 +1,45 @@
+######################################################
+# Vivado Version: Vivado 2022.2
+# Board: Zybo-Z7-20
+# OS: Ubuntu 22.04
+######################################################
+start_gui
+# create a project folder
+create_project mio_led_vivado ~/Projects/fpgaProjects/EmbeddedSystemDesign/mio_led/mio_led_vivado -part xc7z020clg400-1
+#choose the part
+set_property board_part digilentinc.com:zybo-z7-20:part0:1.1 [current_project]
+# create a block design
+create_bd_design "design_1"
+
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+# Run automation block
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+# select appropriate pins
+startgroup
+set_property -dict [list \
+  CONFIG.PCW_ENET0_PERIPHERAL_ENABLE {0} \
+  CONFIG.PCW_EN_CLK0_PORT {0} \
+  CONFIG.PCW_I2C_RESET_ENABLE {0} \
+  CONFIG.PCW_QSPI_PERIPHERAL_ENABLE {0} \
+  CONFIG.PCW_SD0_PERIPHERAL_ENABLE {0} \
+  CONFIG.PCW_USB0_PERIPHERAL_ENABLE {0} \
+  CONFIG.PCW_USB_RESET_ENABLE {0} \
+  CONFIG.PCW_EN_RST0_PORT {0} \
+  CONFIG.PCW_USE_M_AXI_GP0 {0} \
+] [get_bd_cells processing_system7_0]
+endgroup
+# Regenerate layout and validate the design
+regenerate_bd_layout
+validate_bd_design
+# Create HDL Wrapper
+make_wrapper -files [get_files ~/Projects/fpgaProjects/EmbeddedSystemDesign/mio_led/mio_led_vivado/mio_led_vivado.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse ~/Projects/fpgaProjects/EmbeddedSystemDesign/mio_led/mio_led_vivado/mio_led_vivado.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+# Generate bitstream
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+# Wait till the bit stream is generated
+# Export design with bit-stream
+file mkdir ~/Projects/fpgaProjects/EmbeddedSystemDesign/mio_led/mio_led_vitis
+write_hw_platform -fixed -include_bit -force -file ~/Projects/fpgaProjects/EmbeddedSystemDesign/mio_led/mio_led_vitis/design_1_wrapper.xsa
