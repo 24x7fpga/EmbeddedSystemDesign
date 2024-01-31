@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Jan 31 17:01:41 2024
+# Process ID: 12291
+# Current directory: /home/kiran/Projects/fpgaProjects/EmbeddedSystemDesign/mio_gpio/mio_gpio_vivado/mio_gpio_vivado.runs/mio_gpio_processing_system7_0_0_synth_1
+# Command line: vivado -log mio_gpio_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mio_gpio_processing_system7_0_0.tcl
+# Log file: /home/kiran/Projects/fpgaProjects/EmbeddedSystemDesign/mio_gpio/mio_gpio_vivado/mio_gpio_vivado.runs/mio_gpio_processing_system7_0_0_synth_1/mio_gpio_processing_system7_0_0.vds
+# Journal file: /home/kiran/Projects/fpgaProjects/EmbeddedSystemDesign/mio_gpio/mio_gpio_vivado/mio_gpio_vivado.runs/mio_gpio_processing_system7_0_0_synth_1/vivado.jou
+# Running On: SuperComp, OS: Linux, CPU Frequency: 3445.556 MHz, CPU Physical cores: 4, Host memory: 25066 MB
+#-----------------------------------------------------------
+source mio_gpio_processing_system7_0_0.tcl -notrace

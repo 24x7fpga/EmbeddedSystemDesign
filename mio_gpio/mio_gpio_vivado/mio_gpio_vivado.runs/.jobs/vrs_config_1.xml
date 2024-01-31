@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="mio_gpio_processing_system7_0_0_synth_1" LaunchDir="/home/kiran/Projects/fpgaProjects/EmbeddedSystemDesign/mio_gpio/mio_gpio_vivado/mio_gpio_vivado.runs/mio_gpio_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/kiran/Projects/fpgaProjects/EmbeddedSystemDesign/mio_gpio/mio_gpio_vivado/mio_gpio_vivado.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="mio_gpio_processing_system7_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/kiran/Projects/fpgaProjects/EmbeddedSystemDesign/mio_gpio/mio_gpio_vivado/mio_gpio_vivado.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="mio_gpio_processing_system7_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"mio_gpio": {
+			"proto_instances": {
+			}
+		}
+	}
+}
