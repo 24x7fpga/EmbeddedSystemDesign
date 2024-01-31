@@ -1,0 +1,16 @@
+connections/org.eclipse.remote.serial.core.connectionType/Serial+Port/serial.baudRate=11
+connections/org.eclipse.remote.serial.core.connectionType/Serial+Port/serial.byteSize=3
+connections/org.eclipse.remote.serial.core.connectionType/Serial+Port/serial.parity=0
+connections/org.eclipse.remote.serial.core.connectionType/Serial+Port/serial.portName=/dev/ttyUSB1
+connections/org.eclipse.remote.serial.core.connectionType/Serial+Port/serial.stopBits=0
+connections/org.eclipse.remote.serial.core.connectionType/new/serial.baudRate=11
+connections/org.eclipse.remote.serial.core.connectionType/new/serial.byteSize=3
+connections/org.eclipse.remote.serial.core.connectionType/new/serial.parity=0
+connections/org.eclipse.remote.serial.core.connectionType/new/serial.portName=/dev/ttyUSB1
+connections/org.eclipse.remote.serial.core.connectionType/new/serial.stopBits=0
+connections/org.eclipse.remote.serial.core.connectionType/sr3/serial.baudRate=11
+connections/org.eclipse.remote.serial.core.connectionType/sr3/serial.byteSize=3
+connections/org.eclipse.remote.serial.core.connectionType/sr3/serial.parity=0
+connections/org.eclipse.remote.serial.core.connectionType/sr3/serial.portName=/dev/ttyUSB1
+connections/org.eclipse.remote.serial.core.connectionType/sr3/serial.stopBits=0
+eclipse.preferences.version=1
